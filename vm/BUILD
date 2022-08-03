@@ -5,12 +5,14 @@ cc_library(
     hdrs = glob(["include/*.h"]),
     includes = ["include"],
     srcs = glob(["src/*.cc"]),
-
+    deps = ["@fmt//:fmt"],
+    copts = ["--std=c++17"],
     visibility = ["//visibility:public"],
 )
 
 cc_binary(
     name = "cvm",
     srcs = ["main.cc"],
-    deps = ["//vm"],
+    copts = ["--std=c++17"],
+    deps = [":vm"],
 )
