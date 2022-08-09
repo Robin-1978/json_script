@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#bazel
+bazel-bin
+bazel-out
+bazel-json_script
+bazel-testlogs

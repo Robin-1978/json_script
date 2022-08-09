@@ -22,7 +22,7 @@ http_archive(
 load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
 rules_foreign_cc_dependencies()
 
-# fmt
+#third party libraries
 http_archive(
     name = "fmt",
     build_file = "//build_file:fmt.BUILD",
@@ -30,3 +30,19 @@ http_archive(
     strip_prefix = "fmt-9.0.0",
     urls = ["https://github.com/fmtlib/fmt/archive/9.0.0.tar.gz"],
 ) 
+
+http_archive(
+    name = "magic_enum",
+    build_file = "//build_file:magic_enum.BUILD",
+    strip_prefix = "magic_enum-0.8.0",
+    sha256 = "5e7680e877dd4cf68d9d0c0e3c2a683b432a9ba84fc1993c4da3de70db894c3c",
+    urls = ["https://github.com/Neargye/magic_enum/archive/v0.8.0.tar.gz"],
+)
+
+http_archive(
+    name = "lexy",
+    build_file = "//build_file:lexy.BUILD",
+    strip_prefix = "lexy-2022.05.1",
+    sha256 = "675d90e9db738bad3d646022be218e1dab35488679f4446a1da0527d9ce0f3f0",
+    urls = ["https://github.com/foonathan/lexy/archive/refs/tags/v2022.05.1.tar.gz"],
+)

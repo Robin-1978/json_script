@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug_jsc",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bazel-bin/Compiler/jsc",
+            "args": [
+                "${workspaceFolder}/test/test1.json"
+            ],
+            "preLaunchTask": "build_jsc",
+        },
+        {
+            "name": "debug_vm",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bazel-bin/vm/vm",
+            "args": [
+
+            ],
+        },
+        {
+            "name": "release_jsc",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bazel-bin/Compiler/jsc",
+            "args": [
+
+            ],
+        },
+        {
+            "name": "release_vm",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/bazel-bin/vm/vm",
+            "args": [
+
+            ],
+        }
+
+    ], // end of configurations
+    "compounds": []
+}
